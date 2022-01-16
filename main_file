@@ -1,5 +1,4 @@
 import pygame as pg
-from functools import reduce
 from random import randint
 import time
 
@@ -30,9 +29,6 @@ class Life:
 
         create_random_pos(list1)
         return list1, SIZE
-
-    def check_for_ones(self, items, index):
-        return reduce(lambda x, y: x[index]+y[index], items)
 
     def make_emty_edge(self):
 
@@ -110,4 +106,3 @@ class App:
 if __name__ == '__main__':
     app = App()
     app.run()
-
